@@ -47,6 +47,8 @@ Options:
 
 Messages follow the system locale (Simplified / Traditional / English); `GZPASTE_LANG` and `GZPASTE_URL` override the language and the server.
 
+The pastebin stores UTF-8 text only. Convert a GBK or Big5 file first (`iconv -f gbk -t utf-8 FILE | gzpaste`), and encode a binary one (`base64 FILE | gzpaste`).
+
 ## Run without installing
 
 ```sh

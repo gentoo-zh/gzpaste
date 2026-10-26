@@ -47,6 +47,8 @@ gzpaste del <id> <owner>   # 刪除一份 paste
 
 訊息按系統 locale 切簡體 / 正體 / 英文,`GZPASTE_LANG` 和 `GZPASTE_URL` 可覆蓋語言和伺服器位址。
 
+paste 站只存 UTF-8 文字。GBK 或 Big5 的檔案先轉碼(`iconv -f gbk -t utf-8 檔案 | gzpaste`),二進位檔案先編碼(`base64 檔案 | gzpaste`)。
+
 ## 不裝也能跑
 
 ```sh

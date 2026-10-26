@@ -45,7 +45,9 @@ gzpaste del <id> <owner>   # 删除一份 paste
 | `-h, --help` | 显示帮助 |
 | `-V, --version` | 显示版本 |
 
-消息按系统 locale 切简体 / 正體 / 英文,`GZPASTE_LANG` 和 `GZPASTE_URL` 可覆盖语言和服务器地址。
+消息按系统 locale 切简体 / 繁体 / 英文,`GZPASTE_LANG` 和 `GZPASTE_URL` 可覆盖语言和服务器地址。
+
+paste 站只存 UTF-8 文本。GBK 或 Big5 的文件先转码(`iconv -f gbk -t utf-8 文件 | gzpaste`),二进制文件先编码(`base64 文件 | gzpaste`)。
 
 ## 不装也能跑
 
